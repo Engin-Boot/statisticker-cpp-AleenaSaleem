@@ -5,7 +5,7 @@
 #include <cmath>
 
 TEST_CASE("reports average, minimum and maximum") {
-    struct Statistics::ComputedStats<float> computedFvalues;
+    Statistics::ComputedStats<float> computedFvalues;
     auto computedStats = Statistics::ComputeStatistics(computedFvalues, {1.5, 8.9, 3.2, 4.5});
     float epsilon = 0.001;
     REQUIRE(std::abs(computedStats.average - 4.525) < epsilon);
@@ -14,7 +14,7 @@ TEST_CASE("reports average, minimum and maximum") {
 }
 
 TEST_CASE("average is NaN for empty array") {
-    struct Statistics::ComputedStats<float> computedFvalues;
+    Statistics::ComputedStats<float> computedFvalues;
     auto computedStats = Statistics::ComputeStatistics(computedFvalues,{});
     REQUIRE(isnan(computedStats.average) == true);
     REQUIRE(isnan(computedStats.Max) == true);
