@@ -1,10 +1,10 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
-#include"stats.h"
+#include "stats.h"
 #include <cmath>
-struct Statistics::ComputedStats<float> computedFvalues;
 TEST_CASE("reports average, minimum and maximum") {
+	struct Statistics::ComputedStats<float> computedFvalues;
 	vector<float> float_data;
 	float_data.push_back(1.5);
 	float_data.push_back(8.9);
@@ -18,6 +18,7 @@ TEST_CASE("reports average, minimum and maximum") {
 }
 
 TEST_CASE("average is NaN for empty array") {
+	struct Statistics::ComputedStats<float> computedFvalues;
 	vector<float> float_data;
     auto computed_stats = Statistics::ComputeStatistics(computedFvalues, float_data);
     REQUIRE(isnan(computed_stats.average) == true);
