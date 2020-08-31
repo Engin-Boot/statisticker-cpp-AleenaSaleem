@@ -21,7 +21,7 @@ namespace Statistics{
 	}
 	
 	template <typename numeric_type>
-	struct ComputedStats ComputeStatistics(struct ComputedStats<numeric_type> &computedValues, const vector<numeric_type>& data){
+	struct ComputedStats ComputeStatistics(struct ComputedStats &computedValues, const vector<numeric_type>& data){
 		if(data.size() == 0)
 	    	{
 			computedValues.average = numeric_limits<numeric_type>::quiet_NaN();
