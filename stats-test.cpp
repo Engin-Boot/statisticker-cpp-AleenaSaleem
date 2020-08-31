@@ -4,7 +4,7 @@
 #include "stats.h"
 #include <cmath>
 TEST_CASE("reports average, minimum and maximum") {
-	struct Statistics::ComputedStats<float> computedFvalues;
+	struct ComputedStats<float> computedFvalues;
 	vector<float> float_data;
 	float_data.push_back(1.5);
 	float_data.push_back(8.9);
@@ -18,7 +18,7 @@ TEST_CASE("reports average, minimum and maximum") {
 }
 
 TEST_CASE("average is NaN for empty array") {
-	struct Statistics::ComputedStats<float> computedFvalues;
+	struct ComputedStats<float> computedFvalues;
 	vector<float> float_data;
     auto computed_stats = Statistics::ComputeStatistics(computedFvalues, float_data);
     REQUIRE(isnan(computed_stats.average) == true);
