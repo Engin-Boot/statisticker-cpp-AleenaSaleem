@@ -6,7 +6,7 @@ using namespace std;
 
 
 namespace Statistics {
-	template <typename numeric_type>
+	template <class numeric_type>
 	struct ComputedStats{
 		numeric_type average;
 		numeric_type Max;
