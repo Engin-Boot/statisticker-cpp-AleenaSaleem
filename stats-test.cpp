@@ -3,7 +3,7 @@
 #include "catch.hpp"
 #include"stats.h"
 #include <cmath>
-Statistics::ComputedStats<float> computedFvalues;
+struct Statistics::ComputedStats<float> computedFvalues;
 TEST_CASE("reports average, minimum and maximum") {
 	vector<float> float_data;
 	float_data.push_back(1.5);
