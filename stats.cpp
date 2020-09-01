@@ -1,6 +1,6 @@
 #include"stats.h"
 
-/*int main(){
+int main(){
 	vector<int> int_data;
 	int_data.push_back(1);
 	int_data.push_back(2);
@@ -22,4 +22,4 @@
 	cout<<"Max_float: "<<computedFvalues.Max<<endl;
 	cout<<"Min_float: "<<computedFvalues.Min<<endl;
 	return 0;
-}*/
+}
